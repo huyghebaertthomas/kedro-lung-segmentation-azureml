@@ -1,0 +1,30 @@
+[build-system]
+requires = [ "setuptools",]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lung_segmentation"
+readme = "README.md"
+dynamic = [ "dependencies", "version",]
+
+[project.scripts]
+lung-segmentation = "lung_segmentation.__main__:main"
+
+[tool.kedro]
+package_name = "lung_segmentation"
+project_name = "Lung Segmentation"
+kedro_init_version = "0.19.1"
+tools = [ "Data Structure", "Kedro Viz",]
+source_dir = "src"
+
+[project.entry-points."kedro.hooks"]
+
+[tool.setuptools.dynamic.dependencies]
+file = "requirements.txt"
+
+[tool.setuptools.dynamic.version]
+attr = "lung_segmentation.__version__"
+
+[tool.setuptools.packages.find]
+where = [ "src",]
+namespaces = false

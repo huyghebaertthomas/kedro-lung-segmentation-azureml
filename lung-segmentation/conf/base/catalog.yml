@@ -1,0 +1,65 @@
+lung_images:
+  type: partitions.IncrementalDataset
+  path: "data/lung_images"
+  dataset: pillow.ImageDataset
+  filename_suffix: ".png"
+
+lung_masks:
+  type: partitions.IncrementalDataset
+  path: "data/lung_masks"
+  dataset: pillow.ImageDataset
+  filename_suffix: ".png"
+
+resized_lung_images:
+  type: partitions.IncrementalDataset
+  path: "data/resized_lung_images"
+  dataset: pillow.ImageDataset
+  filename_suffix: ".png"
+
+resized_lung_masks:
+  type: partitions.IncrementalDataset
+  path: "data/resized_lung_masks"
+  dataset: pillow.ImageDataset
+  filename_suffix: ".png"
+
+grayscale_lung_images:
+  type: partitions.IncrementalDataset
+  path: "data/grayscale_lung_images"
+  dataset: pillow.ImageDataset
+  filename_suffix: ".png"
+
+grayscale_lung_masks:
+  type: partitions.IncrementalDataset
+  path: "data/grayscale_lung_masks"
+  dataset: pillow.ImageDataset
+  filename_suffix: ".png"
+
+normalized_lung_images:
+  type: partitions.IncrementalDataset
+  path: "data/normalized_lung_images"
+  dataset: lung_segmentation.datasets.numpy_dataset.NumpyDataset
+  filename_suffix: ".npy"
+
+normalized_lung_masks:
+  type: partitions.IncrementalDataset
+  path: "data/normalized_lung_masks"
+  dataset: lung_segmentation.datasets.numpy_dataset.NumpyDataset
+  filename_suffix: ".npy"
+
+lung_dataset:
+  type: lung_segmentation.datasets.numpy_dataset.NumpyDataset
+  filepath: "data/datasets/lung_dataset.npy"
+
+lung_mask_dataset:
+  type: lung_segmentation.datasets.numpy_dataset.NumpyDataset
+  filepath: "data/datasets/lung_mask_dataset.npy"
+
+train_test_dataset:
+  type: partitions.IncrementalDataset
+  path: "data/train_test_datasets/"
+  dataset: lung_segmentation.datasets.numpy_dataset.NumpyDataset
+  filename_suffix: ".npy"
+
+model:
+  type: lung_segmentation.datasets.keras_model_dataset.KerasModelDataset
+  filepath: "data/models/model.h5"

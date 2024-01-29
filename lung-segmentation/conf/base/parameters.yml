@@ -1,0 +1,9 @@
+# Hyperparameters
+split_ratio: 0.2
+model_params:
+  batch_size: 32
+  epochs: 100
+
+# Hooks
+skip_preprocessing: False
+skip_training: True

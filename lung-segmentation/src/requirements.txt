@@ -1,0 +1,9 @@
+ipython>=8.10
+kedro~=0.19.1
+kedro-viz>=6.7.0
+kedro-datasets[pillow.ImageDataset]>=1.0
+
+scikit-learn~=1.0
+keras
+tensorflow
+
